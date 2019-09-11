@@ -1,12 +1,15 @@
 package com.tistory.blackjin.daggerbasic.dagger;
 
+import javax.inject.Singleton;
+
 import dagger.Component;
 
-//@Singleton
+@Singleton
 @Component(modules = CafeModule.class)
 public interface CafeComponent {
 
     CafeInfo cafeInfo();
 
-    CoffeeMaker coffeeMaker();
+    //CoffeeMaker coffeeMaker();
+    CoffeeComponent.Builder coffeeComponent();
 }
