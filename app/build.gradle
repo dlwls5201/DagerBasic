@@ -38,7 +38,7 @@ dependencies {
     implementation "com.google.dagger:dagger:$daggerVersion"
     //안드로이드에 특화된 대거의 기능을 사용
     implementation "com.google.dagger:dagger-android:$daggerVersion"
-    //안드로이드 서포트 라이브러리를 지원하는 개거의 기능을 사용
+    //안드로이드 서포트 라이브러리를 지원하는 대거의 기능을 사용
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
 
     //안드로이드에 특화된 대거의 기능을 처리해주는 어노테이션 프로세서
