@@ -21,6 +21,10 @@ public class DaggerSample {
         CafeInfo cafeInfo1 = cafe.cafeInfo();
         CafeInfo cafeInfo2 = cafe.cafeInfo();
 
+        cafeInfo1.welcome();
+        cafeInfo2.welcome();
+        System.out.println();
+
         //@SingleTon 이기 때문에 두 객체는 값은 값을 반환합니다.
         System.out.println("cafeInfo1 : " + cafeInfo1.hashCode() + " , cafeInfo2 : " + cafeInfo2.hashCode());
 

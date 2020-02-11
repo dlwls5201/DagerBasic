@@ -14,7 +14,7 @@ public class CafeModule {
     @Singleton
     @Provides
     CafeInfo provideCafeInfo() {
-        return new CafeInfo();
+        return new CafeInfo("BlackJin");
     }
 
     @Provides

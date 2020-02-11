@@ -15,6 +15,7 @@ public class CoffeeMaker {
         if (heater == null) {
             System.out.println("heater null");
         } else {
+            System.out.println("brew");
             System.out.println("coffeeMaker : " + hashCode() + " , heater : " + heater.hashCode());
             System.out.println("coffeeBean name : " + coffeeBean.name() + " , hashCode : " + coffeeBean.hashCode());
         }
