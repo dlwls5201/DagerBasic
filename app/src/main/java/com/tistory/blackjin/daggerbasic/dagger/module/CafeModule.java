@@ -11,10 +11,16 @@ import dagger.Provides;
 @Module
 public class CafeModule {
 
+    private String cafeName;
+
+    public CafeModule(String cafeName) {
+        this.cafeName = cafeName;
+    }
+
     @Singleton
     @Provides
     CafeInfo provideCafeInfo() {
-        return new CafeInfo("BlackJin");
+        return new CafeInfo(cafeName);
     }
 
     @Provides

@@ -17,4 +17,12 @@ public interface CafeComponent {
     CoffeeBean coffeeBean();
 
     CoffeeComponent.Builder coffeeComponent();
+
+    @Component.Builder
+    interface Builder{
+
+        Builder cafeModule(CafeModule cafeModule);
+
+        CafeComponent build();
+    }
 }
