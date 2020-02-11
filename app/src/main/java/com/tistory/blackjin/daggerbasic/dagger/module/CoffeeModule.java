@@ -1,10 +1,14 @@
-package com.tistory.blackjin.daggerbasic.dagger;
+package com.tistory.blackjin.daggerbasic.dagger.module;
+
+import com.tistory.blackjin.daggerbasic.dagger.CoffeeMaker;
+import com.tistory.blackjin.daggerbasic.dagger.Heater;
+import com.tistory.blackjin.daggerbasic.dagger.scope.CoffeeScope;
 
 import dagger.Module;
 import dagger.Provides;
 
 @Module
-class CoffeeModule {
+public class CoffeeModule {
 
     @CoffeeScope
     @Provides
@@ -16,11 +20,6 @@ class CoffeeModule {
     @Provides
     Heater provideHeater() {
         return new Heater();
-    }
-
-    @Provides
-    CoffeeBean provideCoffeeBean() {
-        return new CoffeeBean();
     }
 
 }
