@@ -30,8 +30,10 @@ public class DaggerSample {
         CoffeeMaker coffeeMaker1 = cafe.coffeeMaker();
         CoffeeMaker coffeeMaker2 = cafe.coffeeMaker();
 
+        //같은 카페여도 다른 커피기기를 사용할 수 있으므로 매번 다른 값을 반환합니다.
         System.out.println("coffeeMaker1 : " + coffeeMaker1.hashCode() + " , coffeeMaker2 : " + coffeeMaker2.hashCode());
 
+        //커피콩 또한 생성할때마다 다른 값을 반환합니다.
         CoffeeBean coffeeBean = cafe.coffeeBean();
 
         System.out.println();
