@@ -21,9 +21,4 @@ public class CafeModule {
     CoffeeBean provideCoffeeBean() {
         return new CoffeeBean();
     }
-
-    /*@Provides
-    CoffeeMaker provideCoffeeMaker() {
-        return new CoffeeMaker();
-    }*/
 }

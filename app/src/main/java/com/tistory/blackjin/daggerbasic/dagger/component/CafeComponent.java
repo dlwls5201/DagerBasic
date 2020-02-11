@@ -16,6 +16,5 @@ public interface CafeComponent {
 
     CoffeeBean coffeeBean();
 
-    //CoffeeMaker coffeeMaker();
     CoffeeComponent.Builder coffeeComponent();
 }

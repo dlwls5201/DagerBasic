@@ -1,12 +1,9 @@
 package com.tistory.blackjin.daggerbasic.dagger;
 
-import javax.inject.Inject;
-
 public class CoffeeMaker {
 
     private Heater heater;
 
-    @Inject
     public CoffeeMaker(Heater heater) {
         this.heater = heater;
     }
