@@ -2,6 +2,7 @@ package com.tistory.blackjin.daggerbasic.dagger.component;
 
 import com.tistory.blackjin.daggerbasic.dagger.CafeInfo;
 import com.tistory.blackjin.daggerbasic.dagger.CoffeeBean;
+import com.tistory.blackjin.daggerbasic.dagger.CoffeeMaker;
 import com.tistory.blackjin.daggerbasic.dagger.module.CafeModule;
 
 import javax.inject.Singleton;
@@ -16,6 +17,5 @@ public interface CafeComponent {
 
     CoffeeBean coffeeBean();
 
-    //CoffeeMaker coffeeMaker();
-    CoffeeComponent.Builder coffeeComponent();
+    CoffeeMaker coffeeMaker();
 }

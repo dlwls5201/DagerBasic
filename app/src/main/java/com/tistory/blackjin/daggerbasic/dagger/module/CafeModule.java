@@ -2,6 +2,8 @@ package com.tistory.blackjin.daggerbasic.dagger.module;
 
 import com.tistory.blackjin.daggerbasic.dagger.CafeInfo;
 import com.tistory.blackjin.daggerbasic.dagger.CoffeeBean;
+import com.tistory.blackjin.daggerbasic.dagger.CoffeeMaker;
+import com.tistory.blackjin.daggerbasic.dagger.Heater;
 
 import javax.inject.Singleton;
 
@@ -22,8 +24,13 @@ public class CafeModule {
         return new CoffeeBean();
     }
 
-    /*@Provides
-    CoffeeMaker provideCoffeeMaker() {
-        return new CoffeeMaker();
-    }*/
+    @Provides
+    CoffeeMaker provideCoffeeMaker(Heater heater) {
+        return new CoffeeMaker(heater);
+    }
+
+    @Provides
+    Heater provideHeater() {
+        return new Heater();
+    }
 }
