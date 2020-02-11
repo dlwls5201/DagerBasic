@@ -1,5 +1,7 @@
 package com.tistory.blackjin.daggerbasic.dagger;
 
+import com.tistory.blackjin.daggerbasic.dagger.bean.CoffeeBean;
+
 public class CoffeeMaker {
 
     private Heater heater;

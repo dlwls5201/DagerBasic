@@ -1,9 +1,12 @@
 package com.tistory.blackjin.daggerbasic.dagger.component;
 
 import com.tistory.blackjin.daggerbasic.dagger.CafeInfo;
-import com.tistory.blackjin.daggerbasic.dagger.CoffeeBean;
+import com.tistory.blackjin.daggerbasic.dagger.bean.CoffeeBean;
 import com.tistory.blackjin.daggerbasic.dagger.module.CafeModule;
 
+import java.util.Map;
+
+import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dagger.Component;
@@ -14,15 +17,5 @@ public interface CafeComponent {
 
     CafeInfo cafeInfo();
 
-    CoffeeBean coffeeBean();
-
-    CoffeeComponent.Builder coffeeComponent();
-
-    @Component.Builder
-    interface Builder{
-
-        Builder cafeModule(CafeModule cafeModule);
-
-        CafeComponent build();
-    }
+    Map<String,CoffeeBean> coffeeBean();
 }
