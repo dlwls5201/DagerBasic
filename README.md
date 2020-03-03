@@ -18,5 +18,8 @@ Module 초기화
 
 ### step5
 
-Binds와 Multi binding 
+Binds와 Multi binding
 
+### step6
+
+Using in Android
