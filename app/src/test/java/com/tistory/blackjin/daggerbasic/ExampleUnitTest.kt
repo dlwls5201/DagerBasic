@@ -2,8 +2,6 @@ package com.tistory.blackjin.daggerbasic
 
 import org.junit.Test
 
-import org.junit.Assert.*
-
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -11,7 +9,30 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun testHelloWorld() {
+        val myComponent = DaggerMyComponent.create()
+        println("result : ${myComponent.getString()}")
+    }
+
+    @Test
+    fun testMemberInjection() {
+        val myClass = MyClass()
+        val myComponent = DaggerMyComponent.create()
+        myComponent.inject(myClass)
+
+        val str = myClass.str
+        println("str : $str")
+    }
+
+    @Test
+    fun testInjection() {
+        val personComponent = DaggerPersonComponent.create()
+
+        val personA = personComponent.getPersonA()
+        println("personA : $personA")
+
+        val personB = PersonB()
+        personComponent.inject(personB)
+        println("personB : $personB")
     }
 }
